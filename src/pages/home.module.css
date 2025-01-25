@@ -1,0 +1,31 @@
+.searchContainer{
+    color: aliceblue;
+    background-color: #2A3335;
+    text-align: center;
+    padding: 5px;
+}
+
+.searchContainer input{
+    height: 38px;
+    width: 22em;
+    border: 1px solid whitesmoke;
+    padding: 5px;
+    background-color: #0A5EB0;
+    border-radius: 4px;
+}
+
+.searchContainer button{
+    cursor: pointer;
+    border: 1px solid whitesmoke;
+    padding: 5.7px;
+    background-color: #0A5EB0;
+    transition: 0.4s ease-in-out;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.searchContainer button:hover{
+    background-color: tomato;
+    font-weight: bold;
+}
+
