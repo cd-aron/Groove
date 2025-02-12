@@ -1,34 +1,19 @@
 import React from "react";
+import styles from "./card.module.css"
 
 export default function Card({ albums, onAddToFavourite, onRemoveFromFavourite }) {
+
   return (
-    <div
-      style={{
-        display: "grid",
-        gridTemplateColumns: "repeat(auto-fit, minmax(200px, 1fr))",
-        gap: "20px",
-        padding: "20px",
-      }}
-    >
+    <div className={styles.container}>
       {albums.map((album) => (
         <div
           key={album.id}
-          style={{
-            border: "1px solid #ccc",
-            borderRadius: "8px",
-            padding: "10px",
-            textAlign: "center",
-            boxShadow: "0 4px 6px rgba(0,0,0,0.1)",
-          }}
+          className={styles.albums}
         >
           <img
             src={album.images?.[0]?.url}
             alt={album.name}
-            style={{
-              width: "100%",
-              borderRadius: "8px",
-              marginBottom: "10px",
-            }}
+            className={styles.img}
           />
           <h3 style={{ fontSize: "16px", margin: "10px 0" }}>{album.name}</h3>
           <p style={{ fontSize: "14px", color: "#555" }}>
@@ -38,15 +23,7 @@ export default function Card({ albums, onAddToFavourite, onRemoveFromFavourite }
           {onAddToFavourite && (
             <button
               onClick={() => onAddToFavourite(album)}
-              style={{
-                backgroundColor: "#4caf50",
-                color: "#fff",
-                border: "none",
-                borderRadius: "8px",
-                padding: "10px",
-                cursor: "pointer",
-                marginTop: "10px",
-              }}
+              className={styles.btn}
             >
               Add to Favorites
             </button>

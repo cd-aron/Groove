@@ -58,6 +58,8 @@ export default function Home() {
 
   const handleSearch = async () => {
      const token = await getAccessToken();
+
+
      try{
          const response = await fetch(`https://api.spotify.com/v1/search?q=${search}&type=album`,{
           headers: {
@@ -101,10 +103,12 @@ export default function Home() {
       
       <NavBar />
       <div className={styles.searchContainer}> 
+       
       <input type="text" placeholder="Search Your Vibe..." value={search} onChange={(e) => setSearch(e.target.value)}/>
-      <button onClick={handleSearch} className={styles.searchButton}>
-          Search
+        <button onClick={handleSearch} className={styles.searchButton}>
+            Search
         </button>
+
    
       </div>   
   

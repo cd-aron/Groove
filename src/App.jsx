@@ -7,9 +7,9 @@ import Favourite from "./pages/Favourite"
 export default function App() {
  
   return (
-    <Router>
+    <Router basename="/Groove">
     <Routes>
-      <Route path="/" element={<Home />}/>
+      <Route index element={<Home />}/>
       <Route path="/favourite" element={<Favourite />}/>
     </Routes>
   </Router>  

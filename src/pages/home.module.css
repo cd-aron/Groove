@@ -7,7 +7,7 @@
 
 .searchContainer input{
     height: 38px;
-    width: 22em;
+    width: 20em;
     border: 1px solid whitesmoke;
     padding: 5px;
     background-color: #0A5EB0;
@@ -19,13 +19,13 @@
     border: 1px solid whitesmoke;
     padding: 5.7px;
     background-color: #0A5EB0;
-    transition: 0.4s ease-in-out;
     margin-left: 10px;
     border-radius: 5px;
+    transition: 0.4s ease-in-out;
 }
 
 .searchContainer button:hover{
     background-color: tomato;
-    font-weight: bold;
+    font-size: 17px;
 }
 
