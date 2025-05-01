@@ -2,8 +2,11 @@ import React, { useEffect, useState } from "react";
 import NavBar from '../components/NavBar'
 import Card from "../components/Card";
 
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 
 import styles from "./home.module.css"
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
 
 
 export default function Home() {
@@ -103,13 +106,13 @@ export default function Home() {
       
       <NavBar />
       <div className={styles.searchContainer}> 
-       
-      <input type="text" placeholder="Search Your Vibe..." value={search} onChange={(e) => setSearch(e.target.value)}/>
-        <button onClick={handleSearch} className={styles.searchButton}>
-            Search
-        </button>
 
-   
+      <div className={styles.searchSub}>  
+        <input type="text" placeholder="Search Your Vibe..." value={search} onChange={(e) => setSearch(e.target.value)} />
+          <button onClick={handleSearch} className={styles.searchButton}>
+            <FontAwesomeIcon icon={faSearch}/>
+          </button>
+      </div>  
       </div>   
   
 
